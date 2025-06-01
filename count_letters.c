@@ -1,5 +1,5 @@
 #include <stdio.h>
-//int main() {
+int main() {
     char str[100];                                   // declaration d'un tableau de 100 caracteres
     fgets(str, sizeof(str), stdin);                  // lire la ligne entiere
     int count = 0;                                   //compteur
@@ -12,10 +12,10 @@
                 c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || c == 'Y') { // si voyelle majuscule
                 voyelles++;                  //voyelle +1
             } else {                         //sinon
-                consonnes++; consonne +1
+                consonnes++; //consonne +1
             }
-        }
-        count++;                            //caractere suivant
+        } 
+        count++;                            //caractere  suivant
     }
     printf("Voyelles : %d\n", voyelles);
     printf("Consonnes : %d\n", consonnes);
