@@ -12,13 +12,13 @@ int main() {
                 c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || c == 'Y') { // si voyelle majuscule
                 voyelles++;                  //voyelle +1
             } else {                         //sinon
-                consonnes++; //consonne +1
+                consonnes++;                 //consonne +1
             }
         } 
         count++;                            //caractere  suivant
     }
-    printf("Voyelles : %d\n", voyelles);
-    printf("Consonnes : %d\n", consonnes);
+    printf("Voyelles: %d\n", voyelles);
+    printf("Consonnes: %d\n", consonnes);
 
     return 0;
 }
