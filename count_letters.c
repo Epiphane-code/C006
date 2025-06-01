@@ -1,20 +1,26 @@
 #include <stdio.h>
 int main() {
     char str[100];                                   // declaration d'un tableau de 100 caracteres
-    fgets(str, sizeof(str), stdin);                  // lire la ligne entiere
-    int count = 0;                                   //compteur
-    int voyelles = 0;                                // nombre des voyelles
-    int consonnes = 0;                               // nombre des consonnes
-    while (str[count] != '\0') {                     // si on n'est pas à la fin de la ligne
-        char c = str[count];                         // on recupère la valeur
-        if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) { // si c'est un caractère de l'alphabets
-            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'y' || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || c == 'Y') {
-                voyelles++;                  //voyelle +1
-            } else {                         //sinon
-                consonnes++;                 //consonne +1
+    int i, voyelles = 0, consonnes = 0;         // declaration des variables pour le comptage
+    char c;
+    scanf("%99[^\n]", str);                            // lecture de la chaine de caracteres
+    for (i = 0; str[i] != '\0'; i++) {                // boucle pour parcourir la chaine
+        c = str[i];
+        if (c >= 'a' && c <= 'z') {                   // si c est une lettre minuscule
+            c -= 'a';                                 // conversion en index de 0 a 25
+            if (c == 0 || c == 4 || c == 8 || c == 14 || c == 20) {
+                voyelles++;                            // incrementer le compteur de voyelles
+            } else {
+                consonnes++;                           // sinon, incrementer le compteur de consonnes
             }
-        } 
-        count++;                            //caractere  suivant
+        } else if (c >= 'A' && c <= 'Z') {            // si c est une lettre majuscule
+            c -= 'A';                                 // conversion en index de 0 a 25
+            if (c == 0 || c == 4 || c == 8 || c == 14 || c == 20) {
+                voyelles++;                            // incrementer le compteur de voyelles
+            } else {
+                consonnes++;                           // sinon, incrementer le compteur de consonnes
+            }
+        }
     }
     printf("Voyelles : %d\n", voyelles);
     printf("Consonnes : %d\n", consonnes);
