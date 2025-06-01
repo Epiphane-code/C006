@@ -8,8 +8,7 @@ int main() {
     while (str[count] != '\0') {                     // si on n'est pas à la fin de la ligne
         char c = str[count];                         // on recupère la valeur
         if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) { // si c'est un caractère de l'alphabets
-            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'y' || // si voyelle minuscle
-                c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || c == 'Y') { // si voyelle majuscule
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'y' || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || c == 'Y') {
                 voyelles++;                  //voyelle +1
             } else {                         //sinon
                 consonnes++;                 //consonne +1
@@ -17,8 +16,8 @@ int main() {
         } 
         count++;                            //caractere  suivant
     }
-    printf("Voyelles: %d\n", voyelles);
-    printf("Consonnes: %d\n", consonnes);
+    printf("Voyelles : %d\n", voyelles);
+    printf("Consonnes : %d\n", consonnes);
 
     return 0;
 }
