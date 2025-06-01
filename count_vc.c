@@ -19,4 +19,6 @@ int main() {
     }
     printf("Voyelles : %d\n", voyelles);
     printf("Consonnes : %d\n", consonnes);
+
+    return 0;
 }
