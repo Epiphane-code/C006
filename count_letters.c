@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main() {
     char str[100];
-    scanf("%s", str);
+    fgets(str, sizeof(str), stdin);
     int count = 0;
     int voyelles = 0;
     int consonnes = 0;
