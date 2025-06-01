@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main() {
+//int main() {
     char str[100];                                   // declaration d'un tableau de 100 caracteres
     fgets(str, sizeof(str), stdin);                  // lire la ligne entiere
     int count = 0;                                   //compteur
