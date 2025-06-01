@@ -17,7 +17,8 @@ int main() {
         }
         count++;
     }
-    printf("Voyelles : %d\nConsonnes : %d", voyelles, consonnes);
+    printf("Voyelles : %d\n", voyelles);
+    printf("Consonnes : %d\n", consonnes);
 
     return 0;
 }
