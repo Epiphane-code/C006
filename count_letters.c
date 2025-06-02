@@ -1,21 +1,26 @@
 #include <stdio.h>
 int main() {
-    char str[100];                                   // declaration d'un tableau de 100 caracteres
-    int i, voyelles = 0, consonnes = 0;         // declaration des variables pour le comptage
-    char c = ' ';                                 // initialisation de la variable c
-    while (c != '\n'){                        // lecture d'un caractere
-        if (c >= 'a' && c <= 'z') {              // si le caractere est une lettre minuscule
-            str[i++] = c;                         // on l'ajoute au tableau
-            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'y' || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || c == 'Y') {
-                voyelles++;                        // on incremente le compteur de voyelles
-            } else {
-                consonnes++;                       // sinon, on incremente le compteur de consonnes
+    int n; 
+    int voyelle = 0;
+    int consonne = 0;
+    char c;
+    scanf("%c", &c);
+    while (c != '\n'){
+        if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z' )){
+            if(c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U' || c == 'y' || c == 'Y' ){
+                voyelle++;
             }
+            else consonne++;
+
         }
-        scanf("%c", &c);                          // on lit le caractere suivant
+        char nv;
+        scanf("%c", &nv);
+        c = nv;
+
     }
-    printf("Voyelles : %d\n", voyelles);
-    printf("Consonnes : %d\n", consonnes);
+    
+    printf("Voyelles : %d\n", voyelle);
+    printf("Consonnes : %d\n", consonne);
 
     return 0;
 }
