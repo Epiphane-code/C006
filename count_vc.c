@@ -1,5 +1,6 @@
 #include <stdio.h>
 int main() {
+    // Compte le nombre de voyelles et de consonnes dans une phrase
     int n; 
     int voyelle = 0;
     int consonne = 0;
@@ -13,9 +14,8 @@ int main() {
             else consonne++;
 
         }
-        char nv;
-        scanf("%c", &nv);
-        c = nv;
+        // On lit le caractère suivant
+        scanf("%c", &c);
 
     }
     
